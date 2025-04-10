@@ -5,7 +5,7 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home';
-import Members from './components/Members';
+import Members from './components/ProfileCard';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,7 +14,7 @@ function App() {
     <Layout>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='members/:member' element={<Members />} />
+        <Route path='/:member' element={<Members />} />
       </Routes>
     </Layout>
   );
