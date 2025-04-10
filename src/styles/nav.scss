@@ -1,5 +1,5 @@
-@use "./colors"; 
-@use "./fonts"; 
+@use "./partials/colors"; 
+@use "./partials/fonts"; 
 
 header {
     
@@ -11,6 +11,7 @@ header {
         list-style-type: style none;
         display: flex;
         flex-direction: row;
+        color: colors.$black; 
 
 
     }
