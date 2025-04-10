@@ -6,7 +6,7 @@ export default function Nav({ groupmembers }){
             <nav>
                 <ul>
                     <Link to="/">Hjem</Link>
-                    {groupmembers.map((member, index) => <Link to={`/${member.name}`} key={index}></Link>)}
+                    {groupmembers?.map((member, index) => <Link to={`/${member.name}`} key={index}>{member.name}</Link>)}
                 </ul>
             </nav>
         </header>

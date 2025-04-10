@@ -6,9 +6,20 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home';
 import ProfilePage from './components/ProfilePage';
+import { useEffect } from 'react';
+import { fetchProfileCardInfo } from '../backend/sanity/services/memberService';
 
 function App() {
   const [groupmembers, setGroupmembers] = useState([])
+
+  useEffect(() => {
+    getProfileCardInfo()
+  },[])
+
+  const getProfileCardInfo = async () => {
+    const data = await fetchProfileCardInfo()
+    setGroupmembers(data)
+  } 
 
   return (
     <Layout groupmembers={groupmembers}>
