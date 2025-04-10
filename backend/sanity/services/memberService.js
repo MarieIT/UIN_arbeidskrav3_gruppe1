@@ -11,6 +11,13 @@ export async function fetchProfileCardInfo(){
     return data
 }
 
-export async function fetchProfilePageInfo() {
-    
+export async function fetchProfilePageInfo(member) {
+    const data = await client.fetch(
+        `*[_type == 'member' && name == ${member}]{
+            "image": profilecardimage.asset -> url,
+            name,
+            bio,
+            interests
+        }`
+    )
 }
