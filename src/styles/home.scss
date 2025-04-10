@@ -1,5 +1,5 @@
-@use "./colors";
-@use "./fonts";
+@use "./partials/colors";
+@use "./partials/fonts";
 
 #root {
     margin: 0 auto;
@@ -35,9 +35,6 @@ main {
 }
 
 .profileCard {
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
     width: 100%;
     border-radius: 0px;
     padding: 0rem;
