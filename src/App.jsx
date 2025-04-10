@@ -8,9 +8,9 @@ import Home from './components/Home';
 import ProfilePage from './components/ProfilePage';
 import { useEffect } from 'react';
 import { fetchProfileCardInfo } from '../backend/sanity/services/memberService';
+import ProfileCard from './components/ProfileCard';
 import { fetchWorkLoadByMember } from '../backend/sanity/services/workLoad';
 import { fetchWorkLoadByDate } from '../backend/sanity/services/workLoadByDate';
-import ProfileCard from './components/ProfileCard';
 
 function App() {
   const [groupmembers, setGroupmembers] = useState([])

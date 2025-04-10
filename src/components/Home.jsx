@@ -1,7 +1,7 @@
 import ProfileCard from "./ProfileCard"
 import Worklog from "./Worklog"
+export default function Home({groupmembers, workLoadByDate}) {
 import '../styles/partials/home.scss'
-export default function Home({groupmembers}) {
   return (
     
     <main className="member">
@@ -15,11 +15,8 @@ export default function Home({groupmembers}) {
 
         }
       </div>
-        {
+        <Worklog/>
 
-          <Worklog/>
-
-        }
       
     </main>
 
