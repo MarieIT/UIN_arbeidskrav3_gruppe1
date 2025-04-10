@@ -1,5 +1,10 @@
-export default function Worklog({ member }){
+import WorklogItem from "./WorklogItem";
+
+export default function Worklog({ member, workLoadByDate }){
     return(
-        <p>{member}</p>
+        <>
+        <h1>Arbeidslogg</h1>
+        <ul><WorklogItem workLoadByDate={workLoadByDate}/></ul>
+        </>
     )
 }
