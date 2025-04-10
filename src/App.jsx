@@ -8,6 +8,7 @@ import Home from './components/Home';
 import ProfilePage from './components/ProfilePage';
 import { useEffect } from 'react';
 import { fetchProfileCardInfo } from '../backend/sanity/services/memberService';
+import ProfileCard from './components/ProfileCard';
 
 function App() {
   const [groupmembers, setGroupmembers] = useState([])
@@ -24,7 +25,7 @@ function App() {
   return (
     <Layout groupmembers={groupmembers}>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home groupmembers={groupmembers} />} />
         <Route path='/:member' element={<ProfilePage/>} />
       </Routes>
     </Layout>
