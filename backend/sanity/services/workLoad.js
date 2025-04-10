@@ -3,7 +3,8 @@ import { client } from "../client";
 export async function fetchWorkLoadByMember() {
   const data = await client.fetch(
     `*[_type == "member"] {
-      log[] {
+      name,
+      log[] | order(date desc) {
         date,
         entry,
         time

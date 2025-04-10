@@ -50,7 +50,7 @@ function App() {
   return (
     <Layout groupmembers={groupmembers}>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home workLoadByDate={workLoadByDate}/>} />
         <Route path='/:member' element={<ProfilePage/>} />
       </Routes>
     </Layout>
