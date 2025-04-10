@@ -1,6 +1,5 @@
-export default function Worklog() {
-    return (
-        <p>heeei</p>
+export default function Worklog({ member }){
+    return(
+        <p>{member}</p>
     )
-
 }
