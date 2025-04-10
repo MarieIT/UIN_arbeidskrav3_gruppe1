@@ -15,9 +15,14 @@ const member = {
             title: 'E-post',
         },
         {
-            name: 'image',
+            name: 'fontpageimage',
             type: 'image',
-            title: 'Bilde',
+            title: 'ForsideBilde',
+        },
+        {
+            name: 'profilecardimage',
+            type: 'image',
+            title: 'ProfilkortBilde',
         },
         {
             name: 'bio',
