@@ -25,13 +25,9 @@ function App() {
   return (
     <Layout groupmembers={groupmembers}>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home groupmembers={groupmembers} />} />
         <Route path='/:member' element={<ProfilePage/>} />
       </Routes>
-
-      {groupmembers.map((member) => (
-        <ProfileCard member={member} />
-      ))}
     </Layout>
   );
 };

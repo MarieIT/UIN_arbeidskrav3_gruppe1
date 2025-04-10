@@ -1,4 +1,5 @@
 import ProfileCard from "./ProfileCard"
+import Worklog from "./Worklog"
 export default function Home({groupmembers}) {
   return (
     
@@ -12,10 +13,11 @@ export default function Home({groupmembers}) {
 
         }
 
-        <section id="worklog">
+        {
 
+          <Worklog/>
 
-        </section>
+        }
       
     </main>
 
