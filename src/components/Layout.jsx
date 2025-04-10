@@ -1,16 +1,11 @@
 import { Link } from "react-router-dom";
+import Nav from "./Nav";
 
-export default function Layout({ children }) {
+export default function Layout({ children, groupmembers }) {
+  
   return (
     <>
-    <header>
-      <nav>
-        <ul>
-          <li><Link to="members/">Member</Link></li>
-          <li><Link to="/">Home</Link></li>
-        </ul>
-      </nav>
-    </header>
+    <Nav groupmembers={groupmembers}/>
     <main>
       {children}
     </main>

@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-export default function Nav(){
+export default function Nav({ groupmembers }){
     return(
         <header>
             <nav>
                 <ul>
-                    <Link>Home</Link>
-                    {groupmembers.map((member, index) => <Link></Link>)}
+                    <Link to="/">Hjem</Link>
+                    {groupmembers.map((member, index) => <Link to={`/${member.name}`} key={index}></Link>)}
                 </ul>
             </nav>
         </header>
