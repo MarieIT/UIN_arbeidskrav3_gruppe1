@@ -1,6 +1,6 @@
 import ProfileCard from "./ProfileCard"
 import Worklog from "./Worklog"
-export default function Home({groupmembers}) {
+export default function Home({groupmembers, workLoadByDate}) {
   return (
     
     <main>
@@ -13,11 +13,7 @@ export default function Home({groupmembers}) {
 
         }
 
-        {
-
-          <Worklog/>
-
-        }
+        <Worklog/>
       
     </main>
 
