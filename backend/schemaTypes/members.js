@@ -15,7 +15,7 @@ const member = {
             title: 'E-post',
         },
         {
-            name: 'fontpageimage',
+            name: 'frontpageimage',
             type: 'image',
             title: 'ForsideBilde',
         },
