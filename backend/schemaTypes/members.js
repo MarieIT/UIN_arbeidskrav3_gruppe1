@@ -40,6 +40,7 @@ const member = {
                     fields: [
                         { name: 'date', type: 'date', title: 'Dato' },
                         { name: 'entry', type: 'string', title: 'Beskrivelse' },
+                        { name: 'time', type: 'number', title: 'Timer brukt' },
                     ],
                 },
             ],
