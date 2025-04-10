@@ -1,0 +1,21 @@
+@use "./colors";
+@use "./fonts";
+
+#root {
+    margin: 0 auto;
+    width: 100%;  
+    max-width: 1600px;
+}
+
+body {
+    background-color: colors.$babyblue;
+}
+
+main {
+    
+    h2 {
+
+        color: colors.$black; 
+
+    }
+}
