@@ -1,0 +1,14 @@
+@use "./colors"; 
+@use "./fonts"; 
+
+header {
+    
+    background-color: colors.$salmon;
+
+    nav {
+        
+        font-family: fonts.$jersey;  
+    }
+
+}
+
