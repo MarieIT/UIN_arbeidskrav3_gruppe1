@@ -6,12 +6,24 @@ header {
     background-color: colors.$salmon;
 
     nav {
+
+        ul {
+
+            li {
+                
+                list-style-type: style none;
+                font-size: 2rem; 
+                font-family: fonts.$jersey;
+
+            }
+
+        }
         
-        font-family: fonts.$jersey;
-        list-style-type: style none;
         display: flex;
         flex-direction: row;
         color: colors.$black; 
+        padding: 10px; 
+        margin: 50px; 
 
 
     }
