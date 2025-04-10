@@ -1,3 +1,5 @@
+import '../styles/profilecard.scss';
+
 export default function ProfileCard({ member }) {
   return (
     <article className="profileCard">

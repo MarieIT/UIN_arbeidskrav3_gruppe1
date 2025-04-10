@@ -1,0 +1,26 @@
+.member {
+    display: grid;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    h1 {
+        width: 100%;
+    }
+}
+
+.profileCard {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+
+    img {
+        width: 282px;
+        height: 386px;
+    }
+}
