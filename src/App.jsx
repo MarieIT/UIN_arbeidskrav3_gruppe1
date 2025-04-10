@@ -5,17 +5,33 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './components/Home';
-import Members from './components/Members';
+import ProfilePage from './components/ProfilePage';
+import { useEffect } from 'react';
+import { fetchProfileCardInfo } from '../backend/sanity/services/memberService';
+import ProfileCard from './components/ProfileCard';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [groupmembers, setGroupmembers] = useState([])
+
+  useEffect(() => {
+    getProfileCardInfo()
+  },[])
+
+  const getProfileCardInfo = async () => {
+    const data = await fetchProfileCardInfo()
+    setGroupmembers(data)
+  } 
 
   return (
-    <Layout>
+    <Layout groupmembers={groupmembers}>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='members/:member' element={<Members />} />
+        <Route path='/:member' element={<ProfilePage/>} />
       </Routes>
+
+      {groupmembers.map((member) => (
+        <ProfileCard member={member} />
+      ))}
     </Layout>
   );
 };

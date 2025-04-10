@@ -1,3 +1,11 @@
-export default function Members() {
-  <h2>These are the group members:</h2>
-}
+export default function ProfileCard({ member }) {
+  return (
+    <article className="profileCard">
+      {console.log(member?.name)}
+      <img src={member.image} />
+      <h2>{member.name}</h2>
+      <h3>{member.email}</h3>
+    </article>
+  );
+};
+
