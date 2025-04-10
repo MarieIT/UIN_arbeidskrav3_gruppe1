@@ -5,10 +5,10 @@ export default function Layout({ children, groupmembers }) {
   
   return (
     <>
-    <Nav groupmembers={groupmembers}/>
-    <main>
-      {children}
-    </main>
+      <Nav groupmembers={groupmembers}/>
+      <main>
+        {children}
+      </main>
     </>
   )
 }
