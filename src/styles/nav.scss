@@ -1,0 +1,18 @@
+@use "./partials/colors"; 
+@use "./partials/fonts"; 
+
+header {
+    
+    background-color: colors.$salmon;
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        font-family: fonts.$jersey;  
+        ul{
+            display: flex;
+        }
+    }
+
+}
+
