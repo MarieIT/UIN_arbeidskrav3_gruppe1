@@ -1,35 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './components/Home';
+import ProfilePage from './components/ProfilePage';
+import { useEffect } from 'react';
+import { fetchProfileCardInfo } from '../backend/sanity/services/memberService';
+import ProfileCard from './components/ProfileCard';
+import { fetchWorkLoadByMember } from '../backend/sanity/services/workLoad';
+import { fetchWorkLoadByDate } from '../backend/sanity/services/workLoadByDate';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [groupmembers, setGroupmembers] = useState([])
+  const [workLoadByMember, setWorkLoadByMember] = useState([]);
+  const [workLoadByDate, setWorkLoadByDate] = useState([]);
+
+  useEffect(() => {
+    getProfileCardInfo()
+  },[])
+
+  useEffect(() => {
+    getWorkLoadByMember();
+  }, []);
+
+  useEffect(() => {
+    getWorkLoadByDate();
+  }, []);
+
+  const getProfileCardInfo = async () => {
+    const data = await fetchProfileCardInfo()
+    setGroupmembers(data)
+  } 
+
+  const getWorkLoadByMember = async () => {
+    const data = await fetchWorkLoadByMember()
+    setWorkLoadByMember(data);
+  }
+
+  const getWorkLoadByDate = async () => {
+    const data = await fetchWorkLoadByDate()
+    setWorkLoadByDate(data);
+  }
+
+  console.log("Jobblogg etter når de ble lagt inn", workLoadByDate);
+
+  console.log("Jobblogg etter medlemmer", workLoadByMember);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Layout groupmembers={groupmembers}>
+      <Routes>
+        <Route path='/' element={<Home groupmembers={groupmembers} workLoadByDate={workLoadByDate}/>} />
+        <Route path='/:member' element={<ProfilePage workLoadByMember={workLoadByMember}/>} />
+      </Routes>
+    </Layout>
+  );
+};
 
 export default App

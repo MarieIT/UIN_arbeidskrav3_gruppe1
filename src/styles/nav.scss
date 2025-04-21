@@ -1,0 +1,75 @@
+@use "./partials/colors"; 
+@use "./partials/fonts"; 
+
+header {
+    
+    background-color: colors.$salmon; 
+
+//Setter på flex på nav for å lettere kunne flytte rundt på elementene, det samme gjøres på ul. 
+
+    nav {
+
+        font-family: fonts.$jersey;
+        color: colors.$black;
+        width: 100%; 
+        display: flex; 
+        flex-direction: row;
+        justify-content: space-between; 
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bolder;
+
+        ul {
+
+            display: flex; 
+            padding: 0; 
+            margin: 20px; 
+
+            li {
+                
+                list-style-type: none;
+                padding: 20px; 
+
+                //Setter på hover på a-tag for å bytte farge på teksten. 
+
+                a:hover {
+                    color: colors.$freesia;  
+                }
+        
+        
+            }
+
+        }
+
+        a, p, li {
+
+            color: colors.$black;
+        }
+
+        a, li {
+
+            font-size: 1.7rem; 
+        
+        }
+
+        a {
+
+            align-content: center;
+            margin-left: 40px;  
+        }
+
+        a:hover {
+            color: colors.$black;  
+        }
+
+        p {
+            
+            font-size: 2.8rem; 
+            margin: 0; 
+            align-content: center;
+        } 
+
+    }
+
+}
+
