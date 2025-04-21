@@ -5,7 +5,7 @@ import '../styles/profilePage.scss'
 import { useEffect } from "react";
 import { useState } from "react";
 
-export default function ProfilePage(){
+export default function ProfilePage({workLoadByMember}){
     const { member } = useParams()
     const [memberInfo, setMemberInfo] = useState([])
 
@@ -38,7 +38,7 @@ export default function ProfilePage(){
                 </div>
             </div>
             
-            <Worklog member={member} />
+            <Worklog member={member} workLoadByMember={workLoadByMember}/>
           </section>
         </>
     )

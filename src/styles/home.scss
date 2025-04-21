@@ -14,10 +14,6 @@ body {
 .member {
     padding: 1rem;
 
-    h1 {
-        margin-bottom: 1rem;
-    }
-
     &__grid {
         display: grid;
         grid-template-columns: repeat(4,  1fr);
@@ -34,8 +30,9 @@ body {
     text-align: center;
 
     img {
-        width: 100%;
+        width: 60%;
         height: auto;
+        margin-bottom: -100px;
     }
 }
 
