@@ -6,8 +6,6 @@ export default function Home({groupmembers, workLoadByDate}) {
   return (
     
     <main className="member">
-      
-      <h1>Gruppemedlemmer</h1>
 
       <div className="member__grid">
         {
