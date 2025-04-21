@@ -11,7 +11,7 @@ export default function Nav({ groupmembers }){
                     <li>
                         <Link to="/">Hjem</Link>
                     </li>
-                    {groupmembers?.map((member, index) => <li><Link to={`/${member.name}`} key={index}>{member.name.split(' ')[0]}</Link></li>)}
+                    {groupmembers?.map((member, index) => <li key={index}><Link to={`/${member.name}`}>{member.name.split(' ')[0]}</Link></li>)}
                 </ul>
             </nav>
         </header>
