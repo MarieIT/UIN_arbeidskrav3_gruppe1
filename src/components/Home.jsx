@@ -1,7 +1,8 @@
+import "../styles/home.scss"
 import ProfileCard from "./ProfileCard"
 import Worklog from "./Worklog"
-import '../styles/partials/home.scss'
-export default function Home({groupmembers, workLoadByDate }) {
+export default function Home({groupmembers, workLoadByDate}) {
+
   return (
     
     <main className="member">

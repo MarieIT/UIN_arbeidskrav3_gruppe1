@@ -11,6 +11,15 @@ body {
     background-color: colors.$babyblue;
 }
 
+main {
+    
+    h2 {
+
+        color: colors.$black; 
+
+    }
+}
+
 .member {
     padding: 1rem;
 
@@ -29,6 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     max-width: 300px;
+    width: 100%;
     border-radius: 0px;
     padding: 0rem;
     background-color: #fff;
