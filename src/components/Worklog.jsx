@@ -4,7 +4,7 @@ export default function Worklog({ member, workLoadByDate, workLoadByMember }){
     return(
         <>
         <h1>Arbeidslogg</h1>
-        <ul><WorklogItem workLoadByDate={workLoadByDate} workLoadByMember={workLoadByMember} member={member}/></ul>
+        <div><WorklogItem workLoadByDate={workLoadByDate} workLoadByMember={workLoadByMember} member={member}/></div>
         </>
     )
 }
