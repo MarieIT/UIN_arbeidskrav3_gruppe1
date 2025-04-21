@@ -4,9 +4,14 @@ export default function WorklogItem({ workLoadByDate, workLoadByMember, member }
     }
   return (
     <>
-      {
-        generateWorkLoad()?.map((logItem, index) => <li key={index}>{logItem.date} {logItem.memberName} {logItem.entry} {logItem.time}</li>)
-      }
+      {generateWorkLoad()?.map((logItem, index) => 
+        <ul key={index}>
+          <li>{logItem.date}</li>
+          <li>{logItem.memberName}</li>
+          <li>{logItem.entry}</li>
+          <li>{logItem.time}</li>
+        </ul>
+        )}
     </>
   )
 }

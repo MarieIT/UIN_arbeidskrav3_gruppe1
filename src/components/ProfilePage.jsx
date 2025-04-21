@@ -37,7 +37,8 @@ export default function ProfilePage({workLoadByMember}){
                   </ul>
                 </div>
             </div>
-            
+          </section>
+          <section className="work-log">
             <Worklog member={member} workLoadByMember={workLoadByMember}/>
           </section>
         </>
