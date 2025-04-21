@@ -10,20 +10,25 @@ export default function ProfilePage(){
 
     useEffect(() => {
         getProfileCardInfo();
-        console.log("ProfilePage: ", memberInfo)
+        console.log("ProfilePage: ", memberInfo[0])
+        console.log(member)
       }, [member]);
     
-      const getProfileCardInfo = async () => {
-        const data = await fetchProfilePageInfo(member)
-        setMemberInfo(data)
-      } 
+    const getProfileCardInfo = async () => {
+      const data = await fetchProfilePageInfo(member)
+      setMemberInfo(data)
+    } 
 
     return(
         <>
-            <h2>{member}</h2>
-            <p></p>
-            <ul>
-            </ul>
+            <section>
+              <h2>{member}</h2>
+              <p>{memberInfo[0]?.bio}</p>
+              <ul>
+                {memberInfo[0]?.interests.map((interest, index) => <li key={index}>{interest}</li>)}
+              </ul>
+              <img src={memberInfo[0]?.image}/>
+            </section>
             <Worklog member={member}/>
         </>
     )
