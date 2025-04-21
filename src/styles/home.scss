@@ -11,15 +11,6 @@ body {
     background-color: colors.$babyblue;
 }
 
-main {
-    
-    h2 {
-
-        color: colors.$black; 
-
-    }
-}
-
 .member {
     padding: 1rem;
 
@@ -43,7 +34,24 @@ main {
     text-align: center;
 
     img {
-        width: 194px;
-        height: 492px;
+        width: 100%;
+        height: auto;
     }
+}
+
+.work-log {
+    h1 {
+        color: colors.$black;
+    }
+
+    ul {
+        list-style: none;
+        width: 100%;
+        text-align: left;
+
+        li {
+            color: colors.$black;
+        }
+    }
+
 }
