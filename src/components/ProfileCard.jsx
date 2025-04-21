@@ -4,7 +4,9 @@ export default function ProfileCard({ member }) {
       {console.log(member?.name)}
       <img src={member.image} />
       <h2>{member.name}</h2>
-      <h3>{member.email}</h3>
+      <h3>
+        <a href={`mailto:${member.email}`}>{member.email}</a>
+      </h3>
     </article>
   );
 };
